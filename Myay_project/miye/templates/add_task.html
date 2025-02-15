@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+  <h1>добавить задачу</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">сохранить</button>
+  </form>
+
+  {% if form.errors %}
+    <div style="color:red;">
+      {{ form.errors }}
+    </div>
+  {% endif %}
+</body>
+{% endblock %}

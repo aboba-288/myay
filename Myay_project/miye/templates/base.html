@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>главная страница</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>список дел</h1>
+        <nav>
+            <ul>
+                <li><a href="/">главная</a></li>
+                <li><a href="/all_task/">все задачи</a></li>
+                <li><a href="/today_task/">сегодняшние задачи</a></li>
+                <li><a href="/add-task/">добавить еще задачу</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+</body>
+</html>

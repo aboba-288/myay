@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for task in tasks %}
+    <div>
+        <p>published: {{ task.created_at }}</p>
+        <h1>{{ task.title }}</h1>
+        <p>{{ task.description }}</p>
+        <a href="{% url 'edit_task' task.title %}">редактировать</a>
+     </div>
+    {% endfor %}
+{% endblock %}
